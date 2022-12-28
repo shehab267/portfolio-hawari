@@ -3,6 +3,7 @@
 test
 responsive-portfolio-website-Alexa-main
 img
+responsive-portfolio*
 # local env files
 .env.local
 .env.*.local
