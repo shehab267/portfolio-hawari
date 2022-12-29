@@ -4,10 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--==================== UNICONS ====================-->
-    <link
+    <!-- UNICONS ====================-->
+    -->
+    <!-- <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    /> -->
+    <!--=============== BOXICONS ===============-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
     />
 
     <!--==================== SWIPER CSS ====================-->
@@ -16,7 +22,7 @@
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="./assets/css/styles.css" />
 
-    <title>Responsive Portfolio Website</title>
+    <title>Hawari's Portfolio</title>
   </head>
 
   <body>
@@ -29,43 +35,43 @@
           <ul class="nav__list grid">
             <li class="nav__item">
               <a href="#home" class="nav__link active-link">
-                <i class="uil uil-estate nav__icon"></i> Home
+                <i class="bx bx-home-alt nav__icon"></i> Home
               </a>
             </li>
             <li class="nav__item">
               <a href="#about" class="nav__link">
-                <i class="uil uil-user nav__icon"></i> About
+                <i class="bx bx-user nav__icon"></i> About
               </a>
             </li>
             <li class="nav__item">
               <a href="#skills" class="nav__link">
-                <i class="uil uil-file-alt nav__icon"></i> Skills
+                <i class="bx bx-file nav__icon"></i> Skills
               </a>
             </li>
             <li class="nav__item">
               <a href="#services" class="nav__link">
-                <i class="uil uil-briefcase-alt nav__icon"></i> Services
+                <i class="bx bx-briefcase-alt-2 nav__icon"></i> Services
               </a>
             </li>
             <li class="nav__item">
               <a href="#portfolio" class="nav__link">
-                <i class="uil uil-scenery nav__icon"></i> Portfolio
+                <i class="bx bx-landscape nav__icon"></i> Portfolio
               </a>
             </li>
             <li class="nav__item">
               <a href="#contact" class="nav__link">
-                <i class="uil uil-message nav__icon"></i> ContactMe
+                <i class="bx bx-message-square-detail nav__icon"></i> Contact me
               </a>
             </li>
           </ul>
-          <i class="uil uil-times nav__close" id="nav-close"></i>
+          <i class="bx bx-x nav__close" id="nav-close"></i>
         </div>
         <div class="nav__btns">
           <!-- theme change button  -->
-          <i class="uil uil-moon change-theme" id="theme-button"></i>
+          <i class="bx bx-moon change-theme" id="theme-button"></i>
 
           <div class="nav__toggle" id="nav-toggle">
-            <i class="uil uil-apps"></i>
+            <i class="bx bx-menu"></i>
           </div>
         </div>
       </nav>
@@ -83,21 +89,15 @@
                 tabindex="_blank"
                 class="home__social-icon"
               >
-                <i class="uil uil-linkedin-alt"></i>
+                <i class="bx bxl-linkedin-square"></i>
               </a>
-              <a
-                href="https://dribbble.com/"
-                tabindex="_blank"
-                class="home__social-icon"
-              >
-                <i class="uil uil-dribbble"></i>
-              </a>
+
               <a
                 href="https://github.com/"
                 tabindex="_blank"
                 class="home__social-icon"
               >
-                <i class="uil uil-github-alt"></i>
+                <i class="bx bxl-github"></i>
               </a>
             </div>
             <div class="home__img">
@@ -138,26 +138,74 @@
                 High level experience in web design and development knowledge,
                 producing quality work.
               </p>
-              <a href="#contact" class="button button--flex">
-                Contact Me<i class="uil uil-message button__icon"></i>
-              </a>
+              <a href="#contact" class="button button--flex"> Contact Me </a>
             </div>
           </div>
           <div class="home__scroll">
             <a href="#about" class="home__scroll-button button--flex">
-              <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+              <i class="bx bx-mouse home__scroll-mouse"></i>
               <span class="home__scroll-name">Scroll down</span>
-              <i class="uil uil-arrow-down"></i>
+              <i class="bx bx-chevrons-down"></i>
             </a>
           </div>
         </div>
       </section>
 
       <!--==================== ABOUT ====================-->
-      <section class="about section" id="about"></section>
+      <section class="about section" id="about">
+        <h2 class="section__title">About Me</h2>
+        <span class="section__subtitle">My introduction</span>
+        <div class="about__container container grid">
+          <!--  -->
+          <div class="about__handle">
+            <!-- <img src="/responsive-portfolio-ansel/assets/img/perfil.png" alt="about" class="about__image" /> -->
+            <img
+              src="/assets/images/portrait-crop-removebg-preview.png"
+              alt="about"
+              class="about__image"
+            />
+          </div>
+          <!--  -->
+
+          <div class="about__data">
+            <div class="about__info">
+              <div class="about__box">
+                <i class="bx bx-briefcase-alt about__icon"></i>
+                <h3 class="about__title">Completed</h3>
+                <span class="about__subtitle">15 + Projects</span>
+              </div>
+
+              <div class="about__box">
+                <i class="bx bx-support about__icon"></i>
+                <h3 class="about__title">Support</h3>
+                <span class="about__subtitle">Online 24/7</span>
+              </div>
+            </div>
+
+            <p class="about__description">
+              Frontend Developer with a passion for creating beautiful and
+              functional websites. I have a strong background in web development
+              and have worked with many different languages and frameworks. I am
+              a self-motivated and hardworking individual who is always looking
+              for new challenges and opportunities.
+            </p>
+          </div>
+        </div>
+        <div class="about__buttons">
+          <a
+            href="/assets/pdf/front-end_shehab.pdf"
+            download=""
+            class="button button--flex"
+          >
+            Download CV
+            <i class="bx bx-download button__icon"></i>
+          </a>
+        </div>
+      </section>
 
       <!--==================== SKILLS ====================-->
-      <section class="skills section" id="skills"></section>
+      <section class="skills section" id="skills">
+      </section>
 
       <!--==================== QUALIFICATION ====================-->
       <section class="qualification section"></section>

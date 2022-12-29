@@ -9,6 +9,10 @@
   /* Change favorite color */
   --hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
+  --first-hue: 207;
+  --sat: 90%;
+  --lig: 72%;
+
   /* HSL color mode */
   --first-color: hsl(var(--hue-color), 69%, 61%);
   --first-color-second: hsl(var(--hue-color), 69%, 61%);
@@ -201,7 +205,7 @@ img {
 }
 
 .nav__toggle {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
@@ -249,7 +253,7 @@ img {
   position: absolute;
   right: 1.3rem;
   bottom: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   cursor: pointer;
   color: var(--first-color);
 }
@@ -405,6 +409,98 @@ img {
 }
 
 /*==================== ABOUT ====================*/
+
+/*  */
+.about__image {
+  width: 215px;
+  max-width: 120%;
+}
+
+.about__handle {
+  justify-self: center;
+  width: 190px;
+  height: 293px;
+  background: linear-gradient(
+    180deg,
+    hsl(var(--first-hue), var(--sat), var(--lig), 1),
+    hsl(var(--first-hue), var(--sat), var(--lig), 0.2)
+  );
+  border-radius: 10rem 10rem 1rem 1rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+  justify-content: end;
+  overflow: hidden;
+}
+/*  */
+
+/* .about__description {
+  text-align: center;
+  margin-bottom: var(--mb-2-5);
+}
+
+.about__info {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: var(--mb-2-5);
+}
+
+.about__info-title {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+
+.about__info-name {
+  font-size: var(--smaller-font-size);
+}
+
+.about__info-title,
+.about__info-name {
+  display: block;
+  text-align: center;
+} */
+
+.about__data {
+  text-align: center;
+}
+
+.about__info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.about__box {
+  background-color: var(--container-color);
+  border-radius: 0.75rem;
+  padding: 0.75rem 0.5rem;
+}
+
+.about__icon {
+  font-size: 1.5rem;
+  color: var(--first-color);
+  margin-bottom: 0.5rem;
+}
+
+.about__title {
+  font-size: var(--small-font-size);
+}
+
+.about__subtitle {
+  font-size: var(--tiny-font-size);
+}
+
+.about__description {
+  margin-bottom: 2rem;
+}
+
+/* ------------------------ */
+.about__buttons {
+  display: flex;
+  justify-content: center;
+}
 
 /*==================== SKILLS ====================*/
 
