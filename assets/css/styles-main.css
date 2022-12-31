@@ -3,7 +3,7 @@
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  --header-height: 3.5rem;
+  --header-height: 3rem;
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
@@ -41,13 +41,24 @@
   --font-medium: 500;
   --font-semibold: 600;
 
+  /*========== Margin Bottom ==========*/
+  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
   /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
 }
 
-/* Responsive typography */
+/* Font size for large devices */
 @media screen and (min-width: 968px) {
   :root {
     --biggest-font-size: 2.5rem;
@@ -87,7 +98,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   color: var(--title-color);
   font-weight: var(--font-semibold);
 }
@@ -193,23 +205,19 @@ body.light-theme {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 968px;
-  /* max-width: 768px; */
-
   margin-left: 1rem;
   margin-right: 1rem;
 }
 
-.grid {
-  display: grid;
-  gap: 1.25rem;
+.section__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
 }
 
-.main {
-  overflow: hidden;
-}
-
-.section {
-  padding: 4.5rem 0 1rem;
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-3);
 }
 
 .section__title,
@@ -228,8 +236,25 @@ body.light-theme {
   font-size: var(--smaller-font-size);
   color: var(--text-color-light);
 }
+/*==================== LAYOUT ====================*/
+.container {
+  max-width: 768px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
 
-/*=============== HEADER & NAV===============*/
+.grid {
+  display: grid;
+  gap: 1.25rem;
+}
+.main {
+  overflow: hidden;
+}
+
+.section {
+  padding: 4.5rem 0 1rem;
+}
+
 .header {
   width: 100%;
   position: fixed;
@@ -240,6 +265,7 @@ body.light-theme {
   transition: 0.4s; /* for light mode animation */
 }
 
+/*==================== NAV ====================*/
 .nav {
   max-width: 968px;
   height: var(--header-height);
@@ -308,7 +334,7 @@ body.light-theme {
   position: absolute;
   right: 1.3rem;
   bottom: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   cursor: pointer;
   color: var(--first-color);
 }
@@ -321,22 +347,6 @@ body.light-theme {
 .show-menu {
   bottom: 0;
 }
-
-/* Active link
-  .active-link {
-    background: linear-gradient(
-      180deg,
-      hsl(var(--first-hue), var(--sat), var(--lig), 1),
-      hsl(var(--first-hue), var(--sat), var(--lig), 0.2)
-    );
-    box-shadow: 0 0 16px hsl(var(--first-hue), var(--sat), var(--lig), 0.4);
-    color: var(--title-color);
-  }
-
-/*   Change background header */
-/*  .scroll-header {
-    box-shadow: 0 4px 4px hsla(0, 0%, 4%, 0.3);
-}  */
 
 /* Active link */
 .active-link {
@@ -388,7 +398,7 @@ body.light-theme {
 }
 
 .home__title {
-  font-size: var(--big-font-size);
+  font-size: var(--biggest-font-size);
 }
 
 .home__subtitle {
@@ -446,21 +456,99 @@ body.light-theme {
   color: var(--body-color);
 }
 
+.button__icon {
+  font-size: 1.25rem;
+  margin-left: var(--mb-0-5);
+  transition: 0.3s;
+}
+
+.button--white {
+  background-color: #fff;
+  color: var(--first-color);
+}
+
+.button--white:hover {
+  background-color: #fff;
+}
+
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+.button--small {
+  padding: 0.75rem 1rem;
+}
+
+.button--link {
+  padding: 0;
+  background-color: transparent;
+  color: var(--first-color);
+}
+
+.button--link:hover {
+  background-color: transparent;
+  color: var(--first-color-alt);
+}
+
 .button--ghost {
   background-color: transparent;
   border: 2px solid var(--first-color);
   color: var(--first-color);
 }
-/*=============== ABOUT ===============*/
-.about__container {
-  row-gap: 2.5rem;
+
+/*==================== ABOUT ====================*/
+
+/*  */
+.about__image {
+  width: 215px;
+  max-width: 120%;
 }
 
-.about__img {
-  width: 220px;
-  border-radius: 1.5rem;
+.about__handle {
   justify-self: center;
+  width: 190px;
+  height: 293px;
+  background: linear-gradient(
+    180deg,
+    hsl(var(--first-hue), var(--sat), var(--lig), 1),
+    hsl(var(--first-hue), var(--sat), var(--lig), 0.2)
+  );
+  border-radius: 10rem 10rem 1rem 1rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+  justify-content: end;
+  overflow: hidden;
 }
+/*  */
+
+/* .about__description {
+  text-align: center;
+  margin-bottom: var(--mb-2-5);
+}
+
+.about__info {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: var(--mb-2-5);
+}
+
+.about__info-title {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semibold);
+  color: var(--title-color);
+}
+
+.about__info-name {
+  font-size: var(--smaller-font-size);
+}
+
+.about__info-title,
+.about__info-name {
+  display: block;
+  text-align: center;
+} */
 
 .about__data {
   text-align: center;
@@ -468,7 +556,7 @@ body.light-theme {
 
 .about__info {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
   margin-bottom: 2rem;
 }
@@ -495,6 +583,12 @@ body.light-theme {
 
 .about__description {
   margin-bottom: 2rem;
+}
+
+/* ------------------------ */
+.about__buttons {
+  display: flex;
+  justify-content: center;
 }
 
 /*=============== SKILLS ===============*/
@@ -718,36 +812,6 @@ body.light-theme {
   color: var(--body-color);
 }
 
-/*=============== TESTIMONIAL ===============*/
-.testimonial__card {
-  background-color: var(--container-color);
-  padding: 1.25rem 1.5rem;
-  border-radius: 1.5rem;
-  margin-bottom: 3rem;
-}
-
-.testimonial__img {
-  width: 60px;
-  border-radius: 3rem;
-}
-
-.testimonial__name {
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
-  mask-border: 0.25rem;
-}
-
-.testimonial__description {
-  font-size: var(--small-font-size);
-}
-/* Swiper class */
-.swiper-pagination-bullet {
-  background-color: var(--text-color-light);
-}
-.swiper-pagination-bullet-active {
-  background-color: var(--first-color);
-}
-
 /*=============== CONTACT ===============*/
 .contact__container {
   row-gap: 3rem;
@@ -848,54 +912,11 @@ body.light-theme {
 .contact__form-area textarea {
   resize: none;
 }
-/*=============== FOOTER ===============*/
-.footer {
-  background-color: var(--first-color);
-}
+/*==================== FOOTER ====================*/
 
-.footer__container {
-  padding: 2rem 0 6rem;
-}
+/*========== SCROLL UP ==========*/
 
-.footer__title,
-.footer__link {
-  color: var(--body-color);
-}
-
-.footer__title {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.footer__list {
-  display: flex;
-  justify-content: center;
-  column-gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.footer__social {
-  display: flex;
-  justify-content: center;
-  column-gap: 1.25rem;
-}
-
-.footer__social-link {
-  background-color: var(--body-color);
-  color: var(--first-color);
-  padding: 0.25rem;
-  border-radius: 0.25rem;
-  font-size: 1rem;
-  display: inline-flex;
-}
-
-.footer__copy {
-  display: block;
-  margin-top: 4.5rem;
-  color: var(--container-color);
-  text-align: center;
-  font-size: var(--smaller-font-size);
-}
+/* Show scroll */
 
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
@@ -912,7 +933,8 @@ body.light-theme {
 ::-webkit-scrollbar-thumb:hover {
   background-color: hsl(var(--second-hue), 8%, 20%);
 }
-/*=============== BREAKPOINTS ===============*/
+
+/*=============== MEDIA QUERIES ==============*/
 /* For small devices */
 @media screen and (max-width: 320px) {
   .nav__menu {
@@ -1101,13 +1123,6 @@ body.light-theme {
   }
   .work__title {
     margin-bottom: 0.5rem;
-  }
-
-  .testimonial__container {
-    width: 750px;
-  }
-  .testimonial__card {
-    padding: 1.5rem 2rem;
   }
 
   .contact__container {
