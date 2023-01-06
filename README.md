@@ -8,7 +8,7 @@
 - Developed first with the Mobile First methodology, then for desktop.
 - Compatible with all mobile devices and with a beautiful and pleasant user interface.
 
-#### [Live Preview of Website](https://shehab267.github.io/Hawari-Portfolio-Website/)
+#### [Live Preview of Website](https://shehab267.github.io/portfolio-hawari/)
 
 feel free to comment on the code. If you like it give it a star:star:
 
