@@ -241,7 +241,7 @@ body.light-theme {
 }
 /*==================== LAYOUT ====================*/
 .container {
-  max-width: 768px;
+  max-width: 769px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
 }
@@ -1236,11 +1236,11 @@ body.light-theme {
 
 /* For large devices */
 @media screen and (min-width: 1024px) {
-  .header,
+  /* .header,
   .main,
   .footer__container {
     padding: 0;
-  }
+  } */
 
   .home__blob {
     width: 320px;
