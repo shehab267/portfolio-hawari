@@ -4,11 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ================= UNICONS =============-->
-    <!-- <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-    /> -->
     <!--=============== BOXICONS ===============-->
     <link
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
@@ -19,8 +14,7 @@
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
 
     <!--==================== CSS ====================-->
-    <!-- <link rel="stylesheet" href="./assets/css/styles.css" /> -->
-    <link rel="stylesheet" href="./assets/css/styles-main.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
 
     <title>Hawari's Portfolio</title>
   </head>
@@ -54,7 +48,7 @@
               </a>
             </li>
             <li class="nav__item">
-              <a href="#portfolio" class="nav__link">
+              <a href="#work" class="nav__link">
                 <i class="bx bx-landscape nav__icon"></i> Portfolio
               </a>
             </li>
@@ -86,17 +80,12 @@
             <div class="home__social">
               <a
                 href="https://www.linkedin.com/in/shehab-alhawary/"
-                tabindex="_blank"
                 class="home__social-icon"
               >
-                <i class="bx bxl-linkedin-square"></i>
+                <i class="bx bxl-linkedin"></i>
               </a>
 
-              <a
-                href="https://github.com/"
-                tabindex="_blank"
-                class="home__social-icon"
-              >
+              <a href="https://github.com/shehab267" class="home__social-icon">
                 <i class="bx bxl-github"></i>
               </a>
             </div>
@@ -153,12 +142,11 @@
 
       <!--==================== ABOUT ====================-->
       <section class="about section" id="about">
+        <!-- <span class="section__subtitle">My introduction</span> -->
         <h2 class="section__title">About Me</h2>
-        <span class="section__subtitle">My introduction</span>
         <div class="about__container container grid">
           <!--  -->
           <div class="about__handle">
-            <!-- <img src="/responsive-portfolio-ansel/assets/img/perfil.png" alt="about" class="about__image" /> -->
             <img
               src="/assets/images/portrait-crop-removebg-preview.png"
               alt="about"
@@ -205,8 +193,7 @@
 
       <!--==================== SKILLS ====================-->
       <section class="skills section" id="skills">
-        <span class="section__subtitle">My abillities</span>
-        <h2 class="section__title">My Experience</h2>
+        <h2 class="section__title">My abillities</h2>
 
         <div class="skills__container container grid">
           <div class="skills__content">
@@ -339,7 +326,7 @@
                 <i class="bx bx-x services__modal-close"></i>
                 <h3 class="services__modal-title">What I assure you</h3>
                 <p class="services__modal-description">
-                  Some of important factors to work with:
+                  Some of important factors to work with me:
                 </p>
 
                 <ul class="services__modal-list">
@@ -367,29 +354,223 @@
           </div>
         </div>
       </section>
-
       <!--==================== PORTFOLIO ====================-->
-      <section class="portfolio section" id="portfolio"></section>
+      <section class="work section" id="work">
+        <span class="section__subtitle">My portfolio</span>
+        <h2 class="section__title">Recent Works</h2>
 
-      <!--==================== PROJECT IN MIND ====================-->
-      <section class="project section"></section>
+        <div class="work__filters">
+          <span class="work__item active-work" data-filter="all">All</span>
+          <span class="work__item" data-filter=".web">Web</span>
+          <span class="work__item" data-filter=".app">App</span>
+          <span class="work__item" data-filter=".js">JavaScript</span>
+          <span class="work__item" data-filter=".agile">Agile</span>
+        </div>
 
-      <!--==================== TESTIMONIAL ====================-->
-      <section class="testimonial section"></section>
+        <div class="work__container container grid">
+          <div class="work__card mix web">
+            <img src="assets/img/work1.jpg" alt="" class="work__img" />
 
+            <h3 class="work__title">Kasper</h3>
+
+            <a href="#" class="work__button">
+              Demo <i class="bx bx-right-arrow-alt work__icon"></i>
+            </a>
+          </div>
+
+          <div class="work__card mix app">
+            <img src="assets/img/work2.jpg" alt="" class="work__img" />
+
+            <h3 class="work__title">WCC App</h3>
+
+            <a href="#" class="work__button">
+              Demo <i class="bx bx-right-arrow-alt work__icon"></i>
+            </a>
+          </div>
+
+          <div class="work__card mix agile">
+            <img src="assets/img/work3.jpg" alt="" class="work__img" />
+
+            <h3 class="work__title">Trello Project</h3>
+
+            <a href="#" class="work__button">
+              Demo <i class="bx bx-right-arrow-alt work__icon"></i>
+            </a>
+          </div>
+
+          <div class="work__card mix web">
+            <img src="assets/img/work4.jpg" alt="" class="work__img" />
+
+            <h3 class="work__title">Leon</h3>
+
+            <a href="https://shehab267.github.io/leon" class="work__button">
+              live Demo <i class="bx bx-right-arrow-alt work__icon"></i>
+            </a>
+          </div>
+
+          <div class="work__card mix js">
+            <img src="assets/img/portfolio1.jpg" alt="" class="work__img" />
+
+            <h3 class="work__title">Monster Game</h3>
+
+            <a href="#" class="work__button">
+              Demo <i class="bx bx-right-arrow-alt work__icon"></i>
+            </a>
+          </div>
+          <div class="work__card mix app">
+            <img src="assets/img/work5.jpg" alt="" class="work__img" />
+
+            <h3 class="work__title">Finding Coach</h3>
+
+            <a href="#" class="work__button">
+              Demo <i class="bx bx-right-arrow-alt work__icon"></i>
+            </a>
+          </div>
+        </div>
+      </section>
       <!--==================== CONTACT ME ====================-->
-      <section class="contact section" id="contact"></section>
+      <section class="contact section" id="contact">
+        <span class="section__subtitle">Get in touch</span>
+        <h2 class="section__title">Contact Me</h2>
+
+        <div class="contact__container container grid">
+          <div class="contact__content">
+            <h3 class="contact__title">Talk to me</h3>
+
+            <div class="contact__info">
+              <div class="contact__card">
+                <i class="bx bx-mail-send contact__card-icon"></i>
+                <h3 class="contact__card-title">Email</h3>
+                <span class="contact__card-data"
+                  >shehabelhawary267@gmail.com</span
+                >
+
+                <a
+                  href="mailto:examplemail@correo.com"
+                  target="_blank"
+                  class="contact__button"
+                >
+                  Write me
+                  <i class="bx bx-right-arrow-alt contact__button-icon"></i>
+                </a>
+              </div>
+
+              <div class="contact__card">
+                <i class="bx bxl-whatsapp contact__card-icon"></i>
+                <h3 class="contact__card-title">Whatsapp</h3>
+                <span class="contact__card-data">+20 120 068 0957</span>
+
+                <a
+                  href="https://api.whatsapp.com/send?phone=+201200680957&text=Hello, more information!"
+                  target="_blank"
+                  class="contact__button"
+                >
+                  Write me
+                  <i class="bx bx-right-arrow-alt contact__button-icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact__content">
+            <h3 class="contact__title">Write me your project</h3>
+
+            <form action="" class="contact__form">
+              <div class="contact__form-div">
+                <label for="" class="contact__form-tag">Names</label>
+                <input
+                  type="text"
+                  placeholder="Insert your name"
+                  class="contact__form-input"
+                />
+              </div>
+
+              <div class="contact__form-div">
+                <label for="" class="contact__form-tag">Mail</label>
+                <input
+                  type="text"
+                  placeholder="Insert your email"
+                  class="contact__form-input"
+                />
+              </div>
+
+              <div class="contact__form-div contact__form-area">
+                <label for="" class="contact__form-tag">Project</label>
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Write your project"
+                  class="contact__form-input"
+                ></textarea>
+              </div>
+
+              <button class="button">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!--==================== FOOTER ====================-->
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="overlay"></div>
+      <div class="footer__container container grid">
+        <!-- <h1 class="footer__title">Sh-Hawary</h1> -->
+        <div>
+          <h1 class="footer__title">Sh-Hawary</h1>
+          <span class="footer__subtitle">Frontend developer</span>
+        </div>
+        <ul class="footer__links">
+          <li>
+            <a href="#about" class="footer__link">About</a>
+          </li>
+
+          <li>
+            <a href="#services" class="footer__link">Services</a>
+          </li>
+
+          <li>
+            <a href="#work" class="footer__link">Projects</a>
+          </li>
+        </ul>
+
+        <ul class="footer__social">
+          <a
+            href="https://www.linkedin.com/in/shehab-alhawary/"
+            target="_blank"
+            class="footer__social-link"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+          <a
+            href="https://github.com/shehab267"
+            target="_blank"
+            class="footer__social-link"
+            ><i class="bx bxl-github"></i
+          ></a>
+        </ul>
+      </div>
+      <div class="footer__copy">
+        Copyrights &#169; <span>Sh-Hawary</span>. All rigths reserved
+      </div>
+    </footer>
 
     <!--==================== SCROLL TOP ====================-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="bx bx-up-arrow-alt scrollup__icon"></i>
+    </a>
 
-    <!--==================== SWIPER JS ====================-->
-    <script src=""></script>
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
 
-    <!--==================== MAIN JS ====================-->
-    <script src="./assets/js/main.js"></script>
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MIXITUP FILTER ===============-->
+    <script src="assets/js/mixitup.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

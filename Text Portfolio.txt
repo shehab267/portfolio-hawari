@@ -55,3 +55,8 @@ Do you want to create your site to make it look more elegant, professional, and 
 Book a free consultation by contacting me now.
 
 Let's take your business to the next level by creating your very own custom Website.
+
+
+## Features: 
+
+- Contact Me Validation
