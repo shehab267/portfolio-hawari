@@ -284,8 +284,7 @@ body.light-theme {
 
 .logo__blob:hover .logo__text {
   fill: var(--first-color);
-    stroke: var(--first-color);
-
+  stroke: var(--first-color);
 }
 
 .nav {
@@ -951,10 +950,9 @@ body.light-theme {
   row-gap: 1rem;
 }
 
-.footer__socials {
-  display: flex;
-  justify-content: center;
-  column-gap: 1.25rem;
+.footer__links,
+.footer__social {
+  z-index: 99;
 }
 
 .footer__social-link {
