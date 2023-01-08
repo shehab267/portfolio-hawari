@@ -13,9 +13,9 @@
         Pink: hsl(356, 66%, 75%)
         Teal: hsl(174, 63%, 62%)
   */
-  --first-hue: 207;
-  --sat: 90%;
-  --lig: 72%;
+  --first-hue: 174;
+  --sat: 63%;
+  --lig: 40%;
   --A: 85%;
 
   --second-hue: 219;
@@ -146,7 +146,7 @@ img {
 body.light-theme {
   --title-color: hsl(var(--second-hue), 15%, 15%);
   --text-color: hsl(var(--second-hue), 8%, 35%);
-  --body-color: hsl(var(--second-hue), 100%, 99%);
+  --body-color: hsl(var(--second-hue), 1%, 97%);
   --container-color: #fff;
 }
 
@@ -269,6 +269,25 @@ body.light-theme {
 }
 
 /*==================== NAV ====================*/
+.logo__blob {
+  width: 81%;
+  height: 3rem;
+  position: relative;
+  top: 6px;
+}
+
+.logo__text {
+  fill: var(--title-color);
+  stroke: var(--title-color);
+  stroke-width: 45px;
+}
+
+.logo__blob:hover .logo__text {
+  fill: var(--first-color);
+    stroke: var(--first-color);
+
+}
+
 .nav {
   max-width: 968px;
   height: var(--header-height);
@@ -281,7 +300,7 @@ body.light-theme {
 .nav_toggle {
   color: var(--title-color);
   font-weight: var(--font-medium);
-  font-size: medium;
+  font-size: larger;
   transition: 0.4s;
 }
 
@@ -455,7 +474,7 @@ body.light-theme {
   color: var(--body-color);
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
-  font-weight: var(--font-medium);
+  font-weight: var(--font-semibold);
   transition: 0.4s;
 }
 
@@ -790,7 +809,7 @@ body.light-theme {
 /* Active item work*/
 .active-work {
   background-color: var(--first-color);
-  color: var(--body-color);
+  /* color: var(--body-color); */
 }
 
 /*=============== CONTACT ===============*/
@@ -1241,6 +1260,10 @@ body.light-theme {
   .footer__container {
     padding: 0;
   } */
+
+  .logo__blob {
+    width: 90%;
+  }
 
   .home__blob {
     width: 320px;
